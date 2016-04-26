@@ -31,4 +31,9 @@
     <!-- Support library compatibility -->
     <item name="elevation">0dp</item>
   </style>
+
+  <!--<style name="MyTheme.Splash" parent ="Theme.AppCompat.Light">
+    <item name="android:windowBackground">@drawable/splash_screen</item>
+    <item name="android:windowNoTitle">true</item>
+  </style>-->
 </resources>
