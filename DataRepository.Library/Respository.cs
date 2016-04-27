@@ -22,12 +22,12 @@ namespace DataRepository.Library
         {
 
             {
-                var child = new DemoChildMode[] { new DemoChildMode { Description = "c1" }, new DemoChildMode { Description = "c2" } }.ToList();
-                var list = new DemoModel[] { new DemoModel { Id = 1, Name = "a",item=new DemoItemMode{Children=child} }, new DemoModel { Id = 2, Name = "b", Children = child } }.ToList();
-                XmlSerializer serializer = new XmlSerializer(typeof(List<DemoModel>));
-                StringWriter stream=new StringWriter();
-                serializer.Serialize(stream, list);
-                System.Diagnostics.Debug.WriteLine( stream.ToString());
+                //var child = new DemoChildMode[] { new DemoChildMode { Description = "c1" }, new DemoChildMode { Description = "c2" } }.ToList();
+                //var list = new DemoModel[] { new DemoModel { Id = 1, Name = "a",item=new DemoItemMode{Children=child} }, new DemoModel { Id = 2, Name = "b", Children = child } }.ToList();
+                //XmlSerializer serializer = new XmlSerializer(typeof(List<DemoModel>));
+                //StringWriter stream=new StringWriter();
+                //serializer.Serialize(stream, list);
+                //System.Diagnostics.Debug.WriteLine( stream.ToString());
             }
 
             {
