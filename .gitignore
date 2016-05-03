@@ -154,3 +154,16 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
+/packages/Xamarin.Android.Support.v7.AppCompat.22.2.0.0/Xamarin.Android.Support.v7.AppCompat.22.2.0.0.nupkg
+/packages/Xamarin.Android.Support.v7.AppCompat.22.2.0.0/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll
+/packages/Xamarin.Android.Support.v7.AppCompat.22.2.0.0/lib/MonoAndroid403
+/packages/Xamarin.Android.Support.v7.AppCompat.22.2.0.0
+/packages/Xamarin.Android.Support.v4.22.2.0.0/Xamarin.Android.Support.v4.22.2.0.0.nupkg
+/packages/Xamarin.Android.Support.v4.22.2.0.0/lib/MonoAndroid403/Xamarin.Android.Support.v4.dll
+/packages/Xamarin.Android.Support.v4.22.2.0.0/lib/MonoAndroid403
+/packages/Xamarin.Android.Support.v4.22.2.0.0
+/packages/Xamarin.Android.Support.Design.22.2.0.0/Xamarin.Android.Support.Design.22.2.0.0.nupkg
+/packages/Xamarin.Android.Support.Design.22.2.0.0/lib/MonoAndroid403/Xamarin.Android.Support.Design.dll
+/packages/Xamarin.Android.Support.Design.22.2.0.0/lib/MonoAndroid403
+/packages/Xamarin.Android.Support.Design.22.2.0.0
+/packages

@@ -9,12 +9,13 @@ using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
+using Android.Widget;
 
 namespace AndroidApp3.Activities
 {
     public abstract class BaseActivity : AppCompatActivity
     {
-        public Toolbar Toolbar
+        public Android.Support.V7.Widget.Toolbar Toolbar
         {
             get;
             set;
@@ -23,14 +24,13 @@ namespace AndroidApp3.Activities
         {
             base.OnCreate(bundle);
             SetContentView(LayoutResource);
-            Toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            Toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             if (Toolbar != null)
             {
                 SetSupportActionBar(Toolbar);
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);
                 SupportActionBar.SetHomeButtonEnabled(true);
-
-            }
+            }            
         }
 
         protected abstract int LayoutResource

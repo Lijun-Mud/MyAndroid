@@ -3,6 +3,31 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutParent"
+        android:gravity="center">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayoutTime">
+            <TextView
+                android:text="Current time:"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewTime"
+                android:layout_marginRight="10px" />
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/textClock" />
+        </LinearLayout>
+    </LinearLayout>
     <TextView
         android:text="@string/fragment2"
         android:textAppearance="?android:attr/textAppearanceLarge"

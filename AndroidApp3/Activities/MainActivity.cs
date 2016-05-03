@@ -80,8 +80,8 @@ namespace AndroidApp3.Activities
                         break;
                 }
 
-                Snackbar.Make(drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong)
-                    .Show();
+                //Snackbar.Make(drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong)
+                //    .Show();
 
                 drawerLayout.CloseDrawers();
             };
