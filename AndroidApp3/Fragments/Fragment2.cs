@@ -4,6 +4,8 @@ using Android.Support.V4.App;
 using Android.Support.V4.View;
 using Android.Views;
 using Android.Runtime;
+using Android.Widget;
+using System;
 
 namespace AndroidApp3.Fragments
 {
@@ -14,6 +16,8 @@ namespace AndroidApp3.Fragments
             base.OnCreate(savedInstanceState);
             HasOptionsMenu = true;
             // Create your fragment here
+
+           
         }
 
         public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
@@ -47,7 +51,13 @@ namespace AndroidApp3.Fragments
         {
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
             //this.Activity.Title = System.DateTime.Now.ToString();
-            return inflater.Inflate(Resource.Layout.fragment2, null);
+            var view= inflater.Inflate(Resource.Layout.fragment2, null);
+
+            //var t = view.FindViewById(Resource.Id.textClock);
+            //var timeText = view.FindViewById<TextClock>(Resource.Id.textClock);
+            //timeText.Text = DateTime.Now.ToString();
+
+            return view;
         }
     }
 }
