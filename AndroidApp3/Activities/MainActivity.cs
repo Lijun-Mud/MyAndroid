@@ -80,6 +80,7 @@ namespace AndroidApp3.Activities
                         break;
                 }
 
+                Toast.MakeText(this.ApplicationContext, "You selected: " + e.MenuItem.TitleFormatted, ToastLength.Long).Show();
                 //Snackbar.Make(drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong)
                 //    .Show();
 

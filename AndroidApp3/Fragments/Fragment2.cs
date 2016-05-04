@@ -53,9 +53,9 @@ namespace AndroidApp3.Fragments
             //this.Activity.Title = System.DateTime.Now.ToString();
             var view= inflater.Inflate(Resource.Layout.fragment2, null);
 
-            //var t = view.FindViewById(Resource.Id.textClock);
-            //var timeText = view.FindViewById<TextClock>(Resource.Id.textClock);
-            //timeText.Text = DateTime.Now.ToString();
+            var t = view.FindViewById(Resource.Id.textClock);
+            var timeText = view.FindViewById<TextClock>(Resource.Id.textClock);
+            timeText.Text = DateTime.Now.ToString();
 
             return view;
         }
