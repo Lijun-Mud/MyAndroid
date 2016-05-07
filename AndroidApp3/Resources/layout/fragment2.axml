@@ -19,16 +19,103 @@
         android:gravity="center" />-->
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1p"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
         <LinearLayout
             android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/linearLayoutUpdateInfo">
+            <TextView
+                android:text="@string/psi_psi_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewPsi"
+                android:layout_marginRight="10px"
+                android:layout_gravity="center"
+                android:textAlignment="center" />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewUpdateTime"
+                android:layout_marginRight="10px" />
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewPsiLevel"
+                android:layout_marginRight="10px" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3hr"
+            android:gravity="center">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3hrPsi"
+                android:textSize="102sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout3hrInfo"
+            android:gravity="center">
+            <TextView
+                android:text="@string/psi_3hour_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView3hrPsiInfo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout24hr"
+            android:gravity="center">
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24hrPsi"
+                android:textSize="102sp"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout24hrInfo"
+            android:gravity="center">
+            <TextView
+                android:text="@string/psi_24hour_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView24hrPsiInfo"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/linearLayout1">
+            android:id="@+id/linearLayout1"
+            android:visibility="invisible">
             <TextView
                 android:text="Current time:"
                 android:layout_width="wrap_content"
@@ -39,22 +126,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:id="@+id/textClock" />
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/linearLayout12">
-            <TextView
-                android:text="Current time2222:"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textViewTime2"
-                android:layout_marginRight="10px" />
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/textClock2" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

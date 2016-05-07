@@ -132,5 +132,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DataRepository.Library\DataRepository.Library.csproj">
+      <Project>{37d42971-aae7-443f-ba24-34d13b9dbd2e}</Project>
+      <Name>DataRepository.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

@@ -12,8 +12,8 @@ using Android.Widget;
 
 namespace DataRepository.Library.Model
 {
-    //[System.Xml.Serialization.XmlRoot("channel")]
-    public class channel
+    [System.Xml.Serialization.XmlRoot("channel")]
+    public class Channel
     {
         [System.Xml.Serialization.XmlElement("title")]
         public string Title { get; set; }

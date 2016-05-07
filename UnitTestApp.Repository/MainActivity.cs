@@ -12,7 +12,7 @@ namespace UnitTestApp.Repository
         protected override void OnCreate(Bundle bundle)
         {
             var repository = new Respository();
-            repository.Test();
+            repository.ReadPsi();
 
             // tests can be inside the main assembly
             AddTest(Assembly.GetExecutingAssembly());
