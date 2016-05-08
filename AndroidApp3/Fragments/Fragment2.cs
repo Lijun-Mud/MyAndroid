@@ -9,6 +9,7 @@ using System;
 using DataRepository.Library;
 using System.Linq;
 using DataRepository.Library.Model;
+using System.Threading.Tasks;
 
 namespace AndroidApp3.Fragments
 {
@@ -18,9 +19,6 @@ namespace AndroidApp3.Fragments
         {
             base.OnCreate(savedInstanceState);
             HasOptionsMenu = true;
-            // Create your fragment here
-
-           
         }
 
         public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
@@ -49,16 +47,27 @@ namespace AndroidApp3.Fragments
             return frag2;
         }
 
+        //public override void OnActivityCreated(Bundle savedInstanceState)
+        //{
+        //    base.OnActivityCreated(savedInstanceState);
+        //    DoWork();
+        //}
 
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        private async void DoWork()
         {
-            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            //this.Activity.Title = System.DateTime.Now.ToString();
-            var view= inflater.Inflate(Resource.Layout.fragment2, null);
+            var pr = new Android.App.ProgressDialog(globalContext);
+            pr.SetMessage("Loading data");
+            pr.SetCancelable(false);
+            pr.Show();
 
             var repository = new Respository();
-            var psiInfo = PsiInformation.Parse(repository.ReadPsi());
+            //var channel = await await Task.Factory.StartNew(async() =>await repository.ReadPsi());//repository.ReadPsi();
+            //var channel = await await await Task.Factory.StartNew(() =>repository.ReadPsi().ContinueWith<Task<Channel>>(t=>t,TaskContinuationOptions.OnlyOnFaulted));
+            await Task.Factory.StartNew(() => BigLongImportantMethodAsync());
 
+            var channel = _channelResult;
+            var psiInfo = PsiInformation.Parse(channel);
+            var view = globalView;
             var foundTextbox = view.FindViewById<TextView>(Resource.Id.textViewUpdateTime);
             foundTextbox.Text = psiInfo.DisplayUpdateTime;
             foundTextbox = view.FindViewById<TextView>(Resource.Id.textView3hrPsi);
@@ -66,12 +75,52 @@ namespace AndroidApp3.Fragments
             foundTextbox = view.FindViewById<TextView>(Resource.Id.textView24hrPsi);
             foundTextbox.Text = psiInfo.Psi24Hour;
 
+            pr.Hide();
+        }
+
+        private Channel _channelResult;
+        private async void BigLongImportantMethodAsync()
+        {
+            var repository = new Respository();
+            try
+            {
+                _channelResult = await repository.ReadPsi();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+        }
+
+        private Context globalContext = null;
+        private View globalView = null;
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
+        {            
+            var ignored = base.OnCreateView(inflater, container, savedInstanceState);
+            //this.Activity.Title = System.DateTime.Now.ToString();
+            var view= inflater.Inflate(Resource.Layout.fragment2, null);
+            globalContext = view.Context;
+            globalView = view;
+            //var repository = new Respository();
+            //var psiInfo = PsiInformation.Parse(repository.ReadPsi());
+
+            //var foundTextbox = view.FindViewById<TextView>(Resource.Id.textViewUpdateTime);
+            //foundTextbox.Text = psiInfo.DisplayUpdateTime;
+            //foundTextbox = view.FindViewById<TextView>(Resource.Id.textView3hrPsi);
+            //foundTextbox.Text = psiInfo.Psi3Hour;
+            //foundTextbox = view.FindViewById<TextView>(Resource.Id.textView24hrPsi);
+            //foundTextbox.Text = psiInfo.Psi24Hour;
+            //pr.Hide();
+
+            DoWork();
+
             {
                 var t = view.FindViewById(Resource.Id.textClock);
                 var timeTexta = view.FindViewById<TextClock>(Resource.Id.textClock);
                 timeTexta.Text = DateTime.Now.ToString();
             }
-
             return view;
         }
     }
