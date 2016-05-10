@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\SplashActivity.cs" />
     <Compile Include="Fragments\Fragment1.cs" />
     <Compile Include="Fragments\Fragment2.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -123,6 +124,8 @@
     <AndroidResource Include="Resources\menu\menu_share1.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\splash_screen.xml" />
+    <AndroidResource Include="Resources\drawable\splash_logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -138,4 +141,5 @@
       <Name>DataRepository.Library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
 </Project>

@@ -15,7 +15,7 @@ using Android.Runtime;
 
 namespace AndroidApp3.Activities
 {
-    [Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
+    [Activity(Label = "Home",  LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
     public class MainActivity : BaseActivity
     {
 
