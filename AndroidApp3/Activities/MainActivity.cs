@@ -114,7 +114,6 @@ namespace AndroidApp3.Activities
                     fragment = Fragment2.NewInstance();
                     break;
             }
-            this.Title = "f" + position;
 
             SupportFragmentManager.BeginTransaction()
                 .Replace(Resource.Id.content_frame, fragment)

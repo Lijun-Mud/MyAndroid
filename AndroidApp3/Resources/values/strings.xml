@@ -10,4 +10,8 @@
   <string name="psi_psi_label">PSI @ </string>
   <string name="psi_3hour_label">3 Hours</string>
   <string name="psi_24hour_label">24 Hours</string>
-</resources>
+  <!--nav_menu-->
+  <string name="nav_menu_psi">PSI</string>
+  <!--Fragment-->
+  <string name="fragment_psi_name">PSI info</string>
+  </resources>

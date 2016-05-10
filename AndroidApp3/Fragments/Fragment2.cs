@@ -99,7 +99,7 @@ namespace AndroidApp3.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {            
             var ignored = base.OnCreateView(inflater, container, savedInstanceState);
-            //this.Activity.Title = System.DateTime.Now.ToString();
+            this.Activity.Title = Resources.GetString(Resource.String.fragment_psi_name);
             var view= inflater.Inflate(Resource.Layout.fragment2, null);
             globalContext = view.Context;
             globalView = view;

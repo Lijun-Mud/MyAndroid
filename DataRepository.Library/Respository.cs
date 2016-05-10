@@ -54,7 +54,7 @@ namespace DataRepository.Library
                 //System.Diagnostics.Debug.WriteLine( stream.ToString());
             }
             System.Threading.Thread.Sleep(5000);
-            throw new ArgumentException("abc");
+            //throw new ArgumentException("abc");
             var serializer = new XmlSerializer(typeof(Channel));
             using (var reader = new StringReader(Resource1.psi))
             {
