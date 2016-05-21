@@ -114,6 +114,10 @@ namespace AndroidApp3.Fragments
             //foundTextbox.Text = psiInfo.Psi24Hour;
             //pr.Hide();
 
+            {
+                //CipherUtility.Encrypt("a");
+            }
+
             DoWork();
 
             {

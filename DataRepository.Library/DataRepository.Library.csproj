@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CipherUtility.cs" />
     <Compile Include="Model\Channel.cs" />
     <Compile Include="Model\psi.cs" />
     <Compile Include="Resource1.Designer.cs">
