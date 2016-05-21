@@ -19,5 +19,5 @@
   <color name="secondary_text">#727272</color>
   <color name="icons">#FFFFFF</color>
   <color name="divider">#B6B6B6</color>
-  <color name="splash_background">#E91E63</color>
+  <color name="splash_background">#c0000000</color>
 </resources>
