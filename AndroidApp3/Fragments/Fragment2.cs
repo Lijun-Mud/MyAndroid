@@ -118,6 +118,20 @@ namespace AndroidApp3.Fragments
                 //CipherUtility.Encrypt("a");
             }
 
+            {
+                var path = Android.App.Application.Context.FilesDir.Path;
+                //PreferenceManager.GetDefaultSharedPreferences(view.Context);
+                var sharedPreference= Android.App.Application.Context.GetSharedPreferences("test.dat", FileCreationMode.Private);
+
+                var value1 = sharedPreference.GetInt("number_of_times_accessed", 0);
+                var value2 = sharedPreference.GetString("your_key2", null);
+
+                var editor = sharedPreference.Edit();
+                editor.PutInt("number_of_times_accessed", 3);
+                editor.PutString("date_last_accessed", DateTime.Now.ToString("yyyy-MMM-dd"));
+                editor.Apply();
+            }
+
             DoWork();
 
             {
