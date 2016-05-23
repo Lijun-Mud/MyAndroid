@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutFull"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TableLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayoutLogin">
+        <TableRow
+            android:id="@+id/tableRowInfo"
+            android:gravity="center"
+            android:layout_width="wrap_content">
+            <TextView
+                android:text="Login Information"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewLogin" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRowUser"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content">
+            <TextView
+                android:text="User name:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/textViewLableUserName" />
+            <EditText
+                android:id="@+id/UserName"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRowPassword"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content">
+            <TextView
+                android:text="Password:"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/textViewLablePassword" />
+            <EditText
+                android:id="@+id/UserName"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:password="true" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRowRember"
+            android:gravity="left"
+            android:layout_width="wrap_content">
+            <CheckBox
+                android:text="Rember me"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxRember" />
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutButton"
+        android:gravity="center">
+        <Button
+            android:text="Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button1" />
+        <Button
+            android:text="Login"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/buttonLogin" />
+    </LinearLayout>
+</LinearLayout>
