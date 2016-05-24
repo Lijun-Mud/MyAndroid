@@ -58,6 +58,7 @@ namespace AndroidApp3.Activities
 
 
             drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            //drawerLayout.SetDrawerLockMode(Android.Support.V4.Widget.DrawerLayout.LockModeLockedClosed);
 
             //Set hamburger items menu
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
@@ -85,6 +86,9 @@ namespace AndroidApp3.Activities
                 //    .Show();
 
                 drawerLayout.CloseDrawers();
+                //drawerLayout.SetDrawerLockMode(Android.Support.V4.Widget.DrawerLayout.LockModeLockedClosed);
+                //navigationView.Enabled = false;
+                //navigationView.Visibility = ViewStates.Gone;
             };
 
 

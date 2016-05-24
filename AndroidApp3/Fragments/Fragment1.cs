@@ -11,6 +11,7 @@ namespace AndroidApp3.Fragments
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+            //mDrawerLayout.setDrawerLockMode(Android.Support.V4.Widget.DrawerLayout.LockModeLockedClosed);
         }
 
         public static Fragment1 NewInstance()

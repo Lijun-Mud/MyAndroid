@@ -27,7 +27,7 @@ namespace AndroidApp3.Activities
 
             Task startupWork = new Task(() =>
             {
-                Task.Delay(5000); // Simulate a bit of startup work.
+                Task.Delay(500); // Simulate a bit of startup work.
             });
 
             startupWork.ContinueWith(t =>
