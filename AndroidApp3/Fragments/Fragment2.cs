@@ -75,6 +75,9 @@ namespace AndroidApp3.Fragments
             foundTextbox = view.FindViewById<TextView>(Resource.Id.textView24hrPsi);
             foundTextbox.Text = psiInfo.Psi24Hour;
 
+            var root=view.FindViewById<LinearLayout>(Resource.Id.linearLayoutRoot);
+            root.Visibility = ViewStates.Visible;
+
             pr.Hide();
         }
 

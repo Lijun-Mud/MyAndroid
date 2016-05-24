@@ -1900,9 +1900,6 @@ namespace AndroidApp3
 			// aapt resource value: 0x7f0b0074
 			public const int linearLayout1 = 2131427444;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int linearLayout1p = 2131427431;
-			
 			// aapt resource value: 0x7f0b0070
 			public const int linearLayout24hr = 2131427440;
 			
@@ -1917,6 +1914,9 @@ namespace AndroidApp3
 			
 			// aapt resource value: 0x7f0b008a
 			public const int linearLayoutButton = 2131427466;
+			
+			// aapt resource value: 0x7f0b0067
+			public const int linearLayoutRoot = 2131427431;
 			
 			// aapt resource value: 0x7f0b0068
 			public const int linearLayoutUpdateInfo = 2131427432;
