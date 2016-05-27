@@ -947,17 +947,14 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0a004d
 			public const int abc_secondary_text_material_light = 2131361869;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int accent = 2131361854;
+			// aapt resource value: 0x7f0a003f
+			public const int accent = 2131361855;
 			
 			// aapt resource value: 0x7f0a0004
 			public const int accent_material_dark = 2131361796;
 			
 			// aapt resource value: 0x7f0a0005
 			public const int accent_material_light = 2131361797;
-			
-			// aapt resource value: 0x7f0a0044
-			public const int activated_color = 2131361860;
 			
 			// aapt resource value: 0x7f0a0006
 			public const int background_floating_material_dark = 2131361798;
@@ -1037,8 +1034,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0a0019
 			public const int hint_foreground_material_light = 2131361817;
 			
-			// aapt resource value: 0x7f0a003f
-			public const int lightPrimary = 2131361855;
+			// aapt resource value: 0x7f0a0042
+			public const int icons = 2131361858;
 			
 			// aapt resource value: 0x7f0a001a
 			public const int link_text_material_dark = 2131361818;
@@ -1067,20 +1064,23 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0a003d
 			public const int primaryDark = 2131361853;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int primaryText = 2131361857;
-			
 			// aapt resource value: 0x7f0a0021
 			public const int primary_dark_material_dark = 2131361825;
 			
 			// aapt resource value: 0x7f0a0022
 			public const int primary_dark_material_light = 2131361826;
 			
+			// aapt resource value: 0x7f0a003e
+			public const int primary_light = 2131361854;
+			
 			// aapt resource value: 0x7f0a0023
 			public const int primary_material_dark = 2131361827;
 			
 			// aapt resource value: 0x7f0a0024
 			public const int primary_material_light = 2131361828;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int primary_text = 2131361856;
 			
 			// aapt resource value: 0x7f0a0025
 			public const int primary_text_default_material_dark = 2131361829;
@@ -1100,8 +1100,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0a002a
 			public const int ripple_material_light = 2131361834;
 			
-			// aapt resource value: 0x7f0a0042
-			public const int secondaryText = 2131361858;
+			// aapt resource value: 0x7f0a0041
+			public const int secondary_text = 2131361857;
 			
 			// aapt resource value: 0x7f0a002b
 			public const int secondary_text_default_material_dark = 2131361835;
@@ -1127,6 +1127,9 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0a003b
 			public const int snackbar_background_color = 2131361851;
 			
+			// aapt resource value: 0x7f0a0044
+			public const int splash_background = 2131361860;
+			
 			// aapt resource value: 0x7f0a002f
 			public const int switch_thumb_disabled_material_dark = 2131361839;
 			
@@ -1144,9 +1147,6 @@ namespace AndroidSmthApp
 			
 			// aapt resource value: 0x7f0a0032
 			public const int switch_thumb_normal_material_light = 2131361842;
-			
-			// aapt resource value: 0x7f0a0040
-			public const int textIcon = 2131361856;
 			
 			static Color()
 			{
@@ -1340,6 +1340,12 @@ namespace AndroidSmthApp
 			
 			// aapt resource value: 0x7f060005
 			public const int abc_text_size_title_material_toolbar = 2131099653;
+			
+			// aapt resource value: 0x7f060060
+			public const int activity_horizontal_margin = 2131099744;
+			
+			// aapt resource value: 0x7f060061
+			public const int activity_vertical_margin = 2131099745;
 			
 			// aapt resource value: 0x7f06004d
 			public const int appbar_elevation = 2131099725;
@@ -1654,11 +1660,14 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f02003f
 			public const int Icon = 2130837567;
 			
-			// aapt resource value: 0x7f020041
-			public const int notification_template_icon_bg = 2130837569;
+			// aapt resource value: 0x7f020042
+			public const int notification_template_icon_bg = 2130837570;
 			
 			// aapt resource value: 0x7f020040
-			public const int snackbar_background = 2130837568;
+			public const int smth = 2130837568;
+			
+			// aapt resource value: 0x7f020041
+			public const int snackbar_background = 2130837569;
 			
 			static Drawable()
 			{
@@ -1673,8 +1682,8 @@ namespace AndroidSmthApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b006e
-			public const int action0 = 2131427438;
+			// aapt resource value: 0x7f0b0073
+			public const int action0 = 2131427443;
 			
 			// aapt resource value: 0x7f0b0057
 			public const int action_bar = 2131427415;
@@ -1700,8 +1709,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0058
 			public const int action_context_bar = 2131427416;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int action_divider = 2131427442;
+			// aapt resource value: 0x7f0b0077
+			public const int action_divider = 2131427447;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -1736,8 +1745,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b004d
 			public const int buttonPanel = 2131427405;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int cancel_action = 2131427439;
+			// aapt resource value: 0x7f0b0074
+			public const int cancel_action = 2131427444;
 			
 			// aapt resource value: 0x7f0b002b
 			public const int center = 2131427371;
@@ -1751,8 +1760,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b004f
 			public const int checkbox = 2131427407;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int chronometer = 2131427445;
+			// aapt resource value: 0x7f0b007a
+			public const int chronometer = 2131427450;
 			
 			// aapt resource value: 0x7f0b002e
 			public const int clip_horizontal = 2131427374;
@@ -1766,8 +1775,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0048
 			public const int contentPanel = 2131427400;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int content_frame = 2131427436;
+			// aapt resource value: 0x7f0b0070
+			public const int content_frame = 2131427440;
 			
 			// aapt resource value: 0x7f0b004c
 			public const int custom = 2131427404;
@@ -1787,8 +1796,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b000d
 			public const int disableHome = 2131427341;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int drawer_layout = 2131427433;
+			// aapt resource value: 0x7f0b006d
+			public const int drawer_layout = 2131427437;
 			
 			// aapt resource value: 0x7f0b001d
 			public const int dropdown = 2131427357;
@@ -1799,8 +1808,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0015
 			public const int end = 2131427349;
 			
-			// aapt resource value: 0x7f0b007a
-			public const int end_padder = 2131427450;
+			// aapt resource value: 0x7f0b007f
+			public const int end_padder = 2131427455;
 			
 			// aapt resource value: 0x7f0b0024
 			public const int enterAlways = 2131427364;
@@ -1844,17 +1853,17 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b003f
 			public const int image = 2131427391;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int info = 2131427449;
+			// aapt resource value: 0x7f0b007e
+			public const int info = 2131427454;
 			
 			// aapt resource value: 0x7f0b0033
 			public const int left = 2131427379;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int line1 = 2131427443;
+			// aapt resource value: 0x7f0b0078
+			public const int line1 = 2131427448;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int line3 = 2131427447;
+			// aapt resource value: 0x7f0b007c
+			public const int line3 = 2131427452;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int listMode = 2131427338;
@@ -1862,8 +1871,20 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0041
 			public const int list_item = 2131427393;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int media_actions = 2131427441;
+			// aapt resource value: 0x7f0b0069
+			public const int login_form = 2131427433;
+			
+			// aapt resource value: 0x7f0b006c
+			public const int login_login_button = 2131427436;
+			
+			// aapt resource value: 0x7f0b006b
+			public const int login_password = 2131427435;
+			
+			// aapt resource value: 0x7f0b006a
+			public const int login_user = 2131427434;
+			
+			// aapt resource value: 0x7f0b0076
+			public const int media_actions = 2131427446;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int middle = 2131427350;
@@ -1874,14 +1895,17 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b001f
 			public const int multiply = 2131427359;
 			
-			// aapt resource value: 0x7f0b007b
-			public const int nav_home_1 = 2131427451;
+			// aapt resource value: 0x7f0b0080
+			public const int nav_home_1 = 2131427456;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int nav_home_2 = 2131427452;
+			// aapt resource value: 0x7f0b0081
+			public const int nav_home_2 = 2131427457;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int nav_view = 2131427437;
+			// aapt resource value: 0x7f0b0071
+			public const int nav_view = 2131427441;
+			
+			// aapt resource value: 0x7f0b0072
+			public const int nav_view_title = 2131427442;
 			
 			// aapt resource value: 0x7f0b001a
 			public const int never = 2131427354;
@@ -1991,8 +2015,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0035
 			public const int start = 2131427381;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int status_bar_latest_event_content = 2131427440;
+			// aapt resource value: 0x7f0b0075
+			public const int status_bar_latest_event_content = 2131427445;
 			
 			// aapt resource value: 0x7f0b0062
 			public const int submit_area = 2131427426;
@@ -2000,11 +2024,11 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b000c
 			public const int tabMode = 2131427340;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int text = 2131427448;
+			// aapt resource value: 0x7f0b007d
+			public const int text = 2131427453;
 			
-			// aapt resource value: 0x7f0b0076
-			public const int text2 = 2131427446;
+			// aapt resource value: 0x7f0b007b
+			public const int text2 = 2131427451;
 			
 			// aapt resource value: 0x7f0b004a
 			public const int textSpacerNoButtons = 2131427402;
@@ -2012,8 +2036,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0066
 			public const int textView1 = 2131427430;
 			
-			// aapt resource value: 0x7f0b0074
-			public const int time = 2131427444;
+			// aapt resource value: 0x7f0b0079
+			public const int time = 2131427449;
 			
 			// aapt resource value: 0x7f0b0043
 			public const int title = 2131427395;
@@ -2021,11 +2045,11 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f0b0046
 			public const int title_template = 2131427398;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int toolbar = 2131427435;
+			// aapt resource value: 0x7f0b006f
+			public const int toolbar = 2131427439;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int toolbar_layout = 2131427434;
+			// aapt resource value: 0x7f0b006e
+			public const int toolbar_layout = 2131427438;
 			
 			// aapt resource value: 0x7f0b0036
 			public const int top = 2131427382;
@@ -2198,49 +2222,52 @@ namespace AndroidSmthApp
 			public const int layout_snackbar_include = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int main = 2130903074;
+			public const int Login = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int nav_header = 2130903075;
+			public const int main = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int notification_media_action = 2130903076;
+			public const int nav_header = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int notification_media_cancel_action = 2130903077;
+			public const int notification_media_action = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int notification_template_big_media = 2130903078;
+			public const int notification_media_cancel_action = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_template_big_media_narrow = 2130903079;
+			public const int notification_template_big_media = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_template_lines = 2130903080;
+			public const int notification_template_big_media_narrow = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_media = 2130903081;
+			public const int notification_template_lines = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_part_chronometer = 2130903082;
+			public const int notification_template_media = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_part_time = 2130903083;
+			public const int notification_template_part_chronometer = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int select_dialog_item_material = 2130903084;
+			public const int notification_template_part_time = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int select_dialog_multichoice_material = 2130903085;
+			public const int select_dialog_item_material = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int select_dialog_singlechoice_material = 2130903086;
+			public const int select_dialog_multichoice_material = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int support_simple_spinner_dropdown_item = 2130903087;
+			public const int select_dialog_singlechoice_material = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int toolbar = 2130903088;
+			public const int support_simple_spinner_dropdown_item = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int toolbar = 2130903089;
 			
 			static Layout()
 			{
@@ -2339,6 +2366,18 @@ namespace AndroidSmthApp
 			
 			// aapt resource value: 0x7f050018
 			public const int fragment2 = 2131034136;
+			
+			// aapt resource value: 0x7f05001c
+			public const int login_login_button_label = 2131034140;
+			
+			// aapt resource value: 0x7f05001b
+			public const int login_password_action_label = 2131034139;
+			
+			// aapt resource value: 0x7f05001a
+			public const int login_password_label = 2131034138;
+			
+			// aapt resource value: 0x7f050019
+			public const int login_user_label = 2131034137;
 			
 			// aapt resource value: 0x7f050016
 			public const int menu_refresh = 2131034134;
@@ -2773,8 +2812,8 @@ namespace AndroidSmthApp
 			// aapt resource value: 0x7f070133
 			public const int MyTheme = 2131165491;
 			
-			// aapt resource value: 0x7f070135
-			public const int MyTheme_ActionBar = 2131165493;
+			// aapt resource value: 0x7f070136
+			public const int MyTheme_ActionBar = 2131165494;
 			
 			// aapt resource value: 0x7f070134
 			public const int MyTheme_Base = 2131165492;
@@ -3051,6 +3090,9 @@ namespace AndroidSmthApp
 			
 			// aapt resource value: 0x7f0700dd
 			public const int Theme_AppCompat_NoActionBar = 2131165405;
+			
+			// aapt resource value: 0x7f070135
+			public const int Theme_HomeScreen = 2131165493;
 			
 			// aapt resource value: 0x7f0700de
 			public const int ThemeOverlay_AppCompat = 2131165406;

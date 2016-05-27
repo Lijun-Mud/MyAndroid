@@ -13,7 +13,7 @@ using Android.Support.Design.Widget;
 
 namespace AndroidSmthApp.Activities
 {
-    [Activity(Label = "Home", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
+    [Activity(Label = "Home" ,MainLauncher =true, LaunchMode = LaunchMode.SingleTop, Icon = "@drawable/Icon")]
     public class MainActivity : BaseActivity
     {
 
@@ -35,8 +35,18 @@ namespace AndroidSmthApp.Activities
 
             drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
+            var title=this.FindViewById<TextView>(Resource.Id.nav_view_title);
+
             //Set hamburger items menu
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.smth);
+
+            //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //SupportActionBar.SetDisplayShowHomeEnabled(false);
+            //SupportActionBar.SetDisplayShowTitleEnabled(true);
+            ////SupportActionBar.SetTitle("My Profile");
+            //SupportActionBar.SetDisplayUseLogoEnabled(false);
+            //SupportActionBar.SetIcon(null);
+            //SupportActionBar.SetLogo(null);
 
             //setup navigation view
             navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
@@ -83,7 +93,7 @@ namespace AndroidSmthApp.Activities
             switch (position)
             {
                 case 0:
-                    fragment = Fragment1.NewInstance();
+                    fragment = LoginFragment.NewInstance();
                     break;
                 case 1:
                     fragment = Fragment2.NewInstance();
