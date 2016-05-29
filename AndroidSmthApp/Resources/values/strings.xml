@@ -6,8 +6,12 @@
   <string name="menu_refresh">Refresh</string>
   <string name="fragment1">You are on Fragment 1</string>
   <string name="fragment2">You are on Fragment 2</string>
+   <!--login form-->
   <string name="login_user_label">User name</string>
   <string name="login_password_label">Password</string>
   <string name="login_password_action_label">Sign in</string>
   <string name="login_login_button_label">Login</string>
+  <!--nav menu-->
+  <string name="nav_menu_login">Login</string>
+  <string name="nav_menu_top10">Top 10</string>
 </resources>

@@ -38,7 +38,7 @@ namespace AndroidSmthApp.Activities
             var title=this.FindViewById<TextView>(Resource.Id.nav_view_title);
 
             //Set hamburger items menu
-            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.smth);
+            SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
 
             //SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //SupportActionBar.SetDisplayShowHomeEnabled(false);
@@ -55,20 +55,19 @@ namespace AndroidSmthApp.Activities
             navigationView.NavigationItemSelected += (sender, e) =>
             {
                 e.MenuItem.SetChecked(true);
+                ListItemClicked(e.MenuItem.ItemId);
 
-                switch (e.MenuItem.ItemId)
-                {
-                    case Resource.Id.nav_home_1:
-                        ListItemClicked(0);
-                        break;
-                    case Resource.Id.nav_home_2:
-                        ListItemClicked(1);
-                        break;
-                }
+                //switch (e.MenuItem.ItemId)
+                //{
+                //    case Resource.Id.nav_home_1:
+                //        ListItemClicked(0);
+                //        break;
+                //    case Resource.Id.nav_home_2:
+                //        ListItemClicked(1);
+                //        break;
+                //}
 
-                Snackbar.Make(drawerLayout, "You selected: " + e.MenuItem.TitleFormatted, Snackbar.LengthLong)
-                    .Show();
-
+                Toast.MakeText(this.ApplicationContext, "You selected: " + e.MenuItem.TitleFormatted, ToastLength.Long).Show();
                 drawerLayout.CloseDrawers();
             };
 
@@ -76,7 +75,7 @@ namespace AndroidSmthApp.Activities
             //if first time you will want to go ahead and click first item.
             if (savedInstanceState == null)
             {
-                ListItemClicked(0);
+                ListItemClicked((int)MenuType.LoginMenu);
             }
         }
 
@@ -92,11 +91,17 @@ namespace AndroidSmthApp.Activities
             Android.Support.V4.App.Fragment fragment = null;
             switch (position)
             {
-                case 0:
+                case Resource.Id.nav_home_1:
                     fragment = LoginFragment.NewInstance();
                     break;
-                case 1:
+                case Resource.Id.nav_home_2:
                     fragment = Fragment2.NewInstance();
+                    break;
+                case (int)MenuType.LoginMenu:
+                    fragment = LoginFragment.NewInstance();
+                    break;
+                case (int)MenuType.Top10Menu:
+                    fragment = Top10Fragment.NewInstance();
                     break;
             }
 
@@ -115,6 +120,12 @@ namespace AndroidSmthApp.Activities
             }
             return base.OnOptionsItemSelected(item);
         }
+    }
+
+    public enum MenuType
+    {
+        LoginMenu=Resource.Id.nav_login,
+        Top10Menu=Resource.Id.nav_top10
     }
 }
 
