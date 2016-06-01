@@ -36,6 +36,9 @@ namespace AndroidSmthApp.Activities
             drawerLayout = this.FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             var title=this.FindViewById<TextView>(Resource.Id.nav_view_title);
+            //this.SetTitle(Resource.Id.login_login_button);
+            //this.Window.SetTitle("asdf");
+            this.Title = "sdfsdf";
 
             //Set hamburger items menu
             SupportActionBar.SetHomeAsUpIndicator(Resource.Drawable.ic_menu);
@@ -75,7 +78,7 @@ namespace AndroidSmthApp.Activities
             //if first time you will want to go ahead and click first item.
             if (savedInstanceState == null)
             {
-                ListItemClicked((int)MenuType.LoginMenu);
+                ListItemClicked((int)MenuType.ThreadMenu);
             }
         }
 
@@ -103,6 +106,9 @@ namespace AndroidSmthApp.Activities
                 case (int)MenuType.Top10Menu:
                     fragment = Top10Fragment.NewInstance();
                     break;
+                case (int)MenuType.ThreadMenu:
+                    fragment = ArticleContentFragment.NewInstance();
+                    break;
             }
 
             SupportFragmentManager.BeginTransaction()
@@ -125,7 +131,8 @@ namespace AndroidSmthApp.Activities
     public enum MenuType
     {
         LoginMenu=Resource.Id.nav_login,
-        Top10Menu=Resource.Id.nav_top10
+        Top10Menu=Resource.Id.nav_top10,
+        ThreadMenu = Resource.Id.nav_thread
     }
 }
 

@@ -14,4 +14,5 @@
   <!--nav menu-->
   <string name="nav_menu_login">Login</string>
   <string name="nav_menu_top10">Top 10</string>
+  <string name="nav_menu_thread">Thread</string>
 </resources>

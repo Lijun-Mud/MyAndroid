@@ -13,14 +13,19 @@ using Newtonsoft.Json;
 
 namespace AndroidSmthApp.Model
 {
-    public class Article
+    public class ArticleThread
     {
         [JsonProperty("id")]
         public string Id { get; set; }
+        [JsonProperty("author_id")]
         public string AuthorId { get; set; }
+        public string Flags { get; set; }
         public string Time { get; set; }
+        [JsonProperty("attachment_list")]
+        public Attachment[] Attachments { get; set; }
         public string Subject { get; set; }
-        public string Board { get; set; }
-        public string Count { get; set; }
+        public string Body { get; set; }
+        [JsonProperty("attachments")]
+        public string AttachmentCount { get; set; }
     }
 }

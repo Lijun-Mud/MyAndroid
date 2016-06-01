@@ -10,16 +10,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using AndroidSmthApp.Model;
+using AndroidSmthApp.Extension;
 
 namespace AndroidSmthApp.Adapter
 {
-    public class ArticleListAdapter : BaseAdapter<Article>
+    public class ArticleThreadAdapter : BaseAdapter<ArticleThread>
     {
 
         private Context _context;
-        private List<Article> _items;
+        private List<ArticleThread> _items;
 
-        public ArticleListAdapter(Context context,List<Article> items):base()
+        public ArticleThreadAdapter(Context context,List<ArticleThread> items):base()
         {
             this._context = context;
             _items = items;
@@ -43,7 +44,7 @@ namespace AndroidSmthApp.Adapter
             }
         }
 
-        public override Article this[int position]
+        public override ArticleThread this[int position]
         {
             get
             {
@@ -54,30 +55,32 @@ namespace AndroidSmthApp.Adapter
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var view = convertView;
-            ArticleListAdapterViewHolder holder = null;
+            ArticleThreadAdapterViewHolder holder = null;
 
             if (view != null)
-                holder = view.Tag as ArticleListAdapterViewHolder;
+                holder = view.Tag as ArticleThreadAdapterViewHolder;
 
             if (holder == null)
             {
-                holder = new ArticleListAdapterViewHolder();
+                holder = new ArticleThreadAdapterViewHolder();
                 var inflater = _context.GetSystemService(Context.LayoutInflaterService).JavaCast<LayoutInflater>();
-                view = inflater.Inflate(Resource.Layout.listview_row, parent, false);
+                view = inflater.Inflate(Resource.Layout.listview_row_thread, parent, false);
                 //holder.Title = view.FindViewById<TextView>(Resource.Id.text);
                 view.Tag = holder;
             }
 
             //fill in your items
             var item = _items[position];
-            view.FindViewById<TextView>(Resource.Id.RowSmallText).Text = item.Board;
-            view.FindViewById<TextView>(Resource.Id.RowDetaillText).Text = item.Subject;
+            view.FindViewById<TextView>(Resource.Id.article_content_author).Text = item.AuthorId;
+            view.FindViewById<TextView>(Resource.Id.article_content_rank).Text = item.AttachmentCount;
+            view.FindViewById<TextView>(Resource.Id.article_content_time).Text = item.Time.ToDate().ToShow();
+            view.FindViewById<TextView>(Resource.Id.article_content_content).Text = item.Body;
 
             return view;
         }
-    }
+    }   
 
-    class ArticleListAdapterViewHolder : Java.Lang.Object
+    class ArticleThreadAdapterViewHolder : Java.Lang.Object
     {
         //Your adapter views to re-use
         //public TextView Title { get; set; }

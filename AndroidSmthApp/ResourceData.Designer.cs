@@ -63,6 +63,18 @@ namespace AndroidSmthApp {
         /// <summary>
         ///   Looks up a localized string similar to [
         ///    {
+        ///        &quot;id&quot;: 1067854,
+        ///        &quot;body&quot;: &quot;补充5.30看诊流水账 \n  \n 周一一早出门去协和，想加特需产科杨剑秋大夫的号。我大概不到七点到了协和8楼特需，排在我前面加她号的只有两个人，我还庆幸，觉得自己是加号的第三个患者，应该没问题能顺利加上号。正常应该是8点开始看诊，但杨大夫直到快八点半才姗姗来迟，而且进诊室前就放话，今天一个号也不给加。我和一起加号的几个准妈妈面面相觑，感受到了阻力。 \n  \n  在杨大夫看诊的间歇，我们都插进门口试探的请求她网开一面，结果老大夫就是不松口。等到十点多，我实在急了，就在门口问她，我这样胎儿畸形的复杂情况能不能给加一个号，做个诊断。杨大夫铁青着脸说，全国的疑难杂症都跑来协和做诊断，我们没有那个接待能力。。。 \n  \n 我去护士台，咨询我这样的情况该怎么才能加上号，一个护士长说杨大夫的号一般人可加不上，你换个其他医生试试。我忽然想起来13年生化妊娠那次，就是在普通门诊找彭萍医生加的号，我就抱着试试看的运气去三楼普通妇科的计划生育门诊。真是天无绝人之路，今天彭萍大夫出诊。她听了我的简述，二话没说就帮我加了她 [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Thread {
+            get {
+                return ResourceManager.GetString("Thread", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to [
+        ///    {
         ///        &quot;id&quot;: &quot;1067854&quot;,
         ///        &quot;author_id&quot;: &quot;tabE&quot;,
         ///        &quot;time&quot;: &quot;1464431922&quot;,

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayoutRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/LinearLayoutHorizontalFirstRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:id="@+id/LinearLayoutVerticalRow"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/article_content_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="author"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <LinearLayout
+                android:id="@+id/LinearLayoutHorizontalTimeRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/article_content_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="rank"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <TextView
+                    android:id="@+id/article_content_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="time"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageButton
+            android:src="@drawable/smth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButtonMore"
+            android:visibility="gone" />
+        <Button
+            android:text="More"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:id="@+id/buttonMore"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/article_content_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Content"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</LinearLayout>
