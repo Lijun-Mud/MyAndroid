@@ -153,6 +153,9 @@
     <AndroidResource Include="Resources\layout\listview_row_thread.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\footer.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
     <None Include="Resources\Thread.txt" />
     <None Include="Resources\Top10.txt" />
   </ItemGroup>

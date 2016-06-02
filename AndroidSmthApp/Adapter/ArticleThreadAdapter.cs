@@ -16,7 +16,6 @@ namespace AndroidSmthApp.Adapter
 {
     public class ArticleThreadAdapter : BaseAdapter<ArticleThread>
     {
-
         private Context _context;
         private List<ArticleThread> _items;
 
