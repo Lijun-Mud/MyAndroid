@@ -25,6 +25,16 @@ namespace AndroidSmthApp.Adapter
             _items = items;
         }
 
+        public void Add(ArticleThread item)
+        {
+            _items.Add(item);
+        }
+
+        public void Add(List<ArticleThread> items)
+        {
+            _items.AddRange(items);
+        }
+
         public override Java.Lang.Object GetItem(int position)
         {
             return position;

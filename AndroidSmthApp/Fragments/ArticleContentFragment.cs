@@ -13,6 +13,7 @@ using Android.Widget;
 using Newtonsoft.Json;
 using AndroidSmthApp.Model;
 using AndroidSmthApp.Adapter;
+using System.Threading.Tasks;
 
 namespace AndroidSmthApp.Fragments
 {
@@ -20,12 +21,22 @@ namespace AndroidSmthApp.Fragments
     {
         private Context _context;
         private List<ArticleThread> _threads;
+        private ProgressBar _progressBar;
+        private ListView _listView;
+        private Android.App.Activity _activity;
+        private ArticleThreadAdapter _adapter;
 
         public override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
 
             // Create your fragment here
+        }
+
+        public override void OnAttach(Android.App.Activity activity)
+        {
+            _activity = activity;
+            base.OnAttach(activity);
         }
 
         public static ArticleContentFragment NewInstance()
@@ -40,20 +51,20 @@ namespace AndroidSmthApp.Fragments
             _context = view.Context;
 
             var listview = view.FindViewById<ListView>(Resource.Id.listView_article_content);
-            
+            _listView = listview;
 
             _threads = JsonConvert.DeserializeObject<List<ArticleThread>>(ResourceData.Thread);
             _threads.ForEach(item => item.Body = item.Body.Length>100? item.Body.Substring(1, 99): item.Body);
             var count = 0;
             _threads.ForEach(item => item.AttachmentCount = (++count).ToString());
             listview.Adapter = new ArticleThreadAdapter(_context, _threads);
+            _adapter = listview.Adapter as ArticleThreadAdapter;
             listview.ScrollStateChanged += Listview_ScrollStateChanged;
             //listview.Scroll += Listview_Scroll;
 
-            //View footer = ((LayoutInflater)this.GetSystemService(Context.LayoutInflaterService)).Inflate(Resource.Layout.footer_layout2, null, false);
             var footer = inflater.Inflate(Resource.Layout.footer, null);
+            _progressBar=footer.FindViewById<ProgressBar>(Resource.Id.footer_progressbar);
             _footer = footer;
-            //var footer = view.FindViewById<LinearLayout>(Resource.Id.footer_layout);
             listview.AddFooterView(footer);
 
             return view;
@@ -77,8 +88,9 @@ namespace AndroidSmthApp.Fragments
         public int visibleThreshold = 1;
         public static int ItemsPerRequest = 10;
         public int currentPage = 0;
+        private bool isWorking = false;
 
-        private void Listview_ScrollStateChanged(object sender, AbsListView.ScrollStateChangedEventArgs e)
+        private async void Listview_ScrollStateChanged(object sender, AbsListView.ScrollStateChangedEventArgs e)
         {
             var listview = sender as ListView;
             var adapter = listview.Adapter as ArticleThreadAdapter;
@@ -94,12 +106,41 @@ namespace AndroidSmthApp.Fragments
                 ++currentPage;
             }
 
-            if ((last + visibleThreshold) > totalItemCount && !IsLoading)
+            if ((last + visibleThreshold) > totalItemCount && !IsLoading&& _footer.WindowVisibility==ViewStates.Visible&&!isWorking)
             {
+                isWorking = true;
                 System.Diagnostics.Debug.WriteLine(e.ScrollState+ "\t@@@\t" + " more" + last+"\t"+ _footer.WindowVisibility);
+                //var pr = new Android.App.ProgressDialog(_context);
+                //pr.SetMessage("Login...");
+                //pr.SetCancelable(false);
+                //pr.Show();
+                _progressBar.Visibility = ViewStates.Visible;
+
+                await Task.Factory.StartNew(() => BigLongImportantMethodAsync());
+
+                var threads = JsonConvert.DeserializeObject<List<ArticleThread>>(ResourceData.Thread);
+                threads.ForEach(item => item.Body = item.Body.Length > 100 ? item.Body.Substring(1, 99) : item.Body);
+                var count = _listView.Adapter.Count - 1;
+                threads.ForEach(item => item.AttachmentCount = (++count).ToString());
+
+                _adapter.Add(threads);
+                _adapter.NotifyDataSetChanged();
+
+                _progressBar.Visibility = ViewStates.Invisible;
+                isWorking = false;
+                //pr.Hide();
                 //Callback(ItemsPerRequest * currentPage);
                 //IsLoading = true;
             }
+        }
+
+        private async void BigLongImportantMethodAsync()
+        {
+            System.Threading.Thread.Sleep(3000);
+            _activity.RunOnUiThread(() =>
+            {
+
+            });
         }
     }
 }

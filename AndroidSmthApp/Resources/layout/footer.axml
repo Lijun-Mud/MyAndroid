@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/footer_layout2"
+    android:id="@+id/footer_layout_root"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -15,10 +15,12 @@
         android:gravity="center"
         android:layout_gravity="center">
         <ProgressBar
+            android:id="@+id/footer_progressbar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
         <TextView
-            android:text="Loading more feeds..."
+            android:text="Loading more..."
             android:id="@+id/footerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
